@@ -36,13 +36,6 @@ Table of Contents
 :Node Role: NICs
 :Single Node: eth0 (10.10.100.51), eth1 (192.168.100.51)
 
-**Note 1:** Multi node deployment is available on the OVS_MultiNode branch.
-
-**Note 2:** Always use dpkg -s <packagename> to make sure you are using havana packages (version : 2013.1)
-
-**Note 3:** This is my current network architecture.
-
-.. image:: http://i.imgur.com/58Dr48n.jpg
 
 2. Preparing your node
 ===============
@@ -58,6 +51,8 @@ Table of Contents
 
    apt-get install ubuntu-cloud-keyring python-software-properties software-properties-common python-keyring
    echo deb http://ubuntu-cloud.archive.canonical.com/ubuntu precise-updates/havana main >> /etc/apt/sources.list.d/havana.list
+
+**NB:** Use dpkg -s <packagename> to make sure you are using havana packages (version : 2013.2)
 
 * Update your system::
 
