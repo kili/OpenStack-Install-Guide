@@ -36,11 +36,6 @@ Table of Contents
 :Node Role: NICs
 :Single Node: eth0 (10.10.100.51), eth1 (192.168.100.51)
 
-**Note 1:** Always use dpkg -s <packagename> to make sure you are using Havana packages (version : 2013.2)
-
-**Note 2:** Instalation architecture.
-
-.. image:: http://i.imgur.com/JyMokiY.jpg
 
 2. Preparing your node
 ===============
@@ -57,6 +52,8 @@ Table of Contents
    apt-get install ubuntu-cloud-keyring python-software-properties software-properties-common python-keyring
    add-apt-repository cloud-archive:havana
    
+   **NB:** Use dpkg -s <packagename> to make sure you are using havana packages (version : 2013.2)
+
 * Update your system::
 
    apt-get update
