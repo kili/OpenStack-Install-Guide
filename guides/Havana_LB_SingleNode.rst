@@ -98,7 +98,17 @@ Table of Contents
 * Install RabbitMQ::
 
    apt-get install -y rabbitmq-server 
-
+   
+   # configure rabbit user which will be used later on during the install process:
+   export USER="<rabbit user name>"
+   export PASSWORD="<put password of your choice here>"
+   
+   rabbitmqctl add_user $USER $PASSWORD
+   rabbitmqctl set_permissions $USER ".*" ".*" ".*"
+   rabbitmqctl set_user_tags $USER management
+   /etc/init.d/rabbitmq-server stop
+   /etc/init.d/rabbitmq-server start
+   
 * Install NTP service::
 
    apt-get install -y ntp
